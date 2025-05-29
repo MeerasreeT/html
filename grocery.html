@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JUICE Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    header {
+      background: rgba(0, 128, 0, 0.8);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+    }
+
+    .login-btn {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      background: white;
+      color: green;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .modal input {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 8px;
+    }
+
+    .close-btn {
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Juice shop
+    <button class="login-btn" onclick="openLogin()">Login</button>
+  </header>
+
+  <h1>Welcome to மாஸ்டர் 90ml </h1>
+
+
+  <div class="grid">
+    <img src="images/tea.jpg.jpg" alt="Product 1">
+    <img src="images/faloda.jpg.jpg" alt="Product 2">
+    <img src="images/maggie.jpg.jpg" alt="Product 3">
+    <img src="images/juice.jpg.jpg" alt="Product 4">
+    <img src="images/icecream.jpg" alt="Product 5">
+    <img src="images/bread_omblette.jpg" alt="Product 6">
+  </div>
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <h3>Login</h3>
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button onclick="alert('Login Clicked')">Submit</button><br><br>
+      <button class="close-btn" onclick="closeLogin()">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p> Contact: +91 98765 43210</p>
+    <p>Email: master90mljuice@example.com</p>
+    <p>Address: 123, Anna Nagar, Chennai, Tamil Nadu - 600040</p>
+  </footer>
+
+  <script>
+    function openLogin() {
+      document.getElementById("loginModal").style.display = "flex";
+    }
+
+    function closeLogin() {
+      document.getElementById("loginModal").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
